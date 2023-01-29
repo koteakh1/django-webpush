@@ -37,6 +37,7 @@ window.addEventListener('load', function() {
     if (!(reg.showNotification)) {
         // Show a message and activate the button
         subBtn.textContent = 'Enable Browser Push Alerts';
+        subBtn.classList.remove("can-be-disabled");
         showMessage(gettext('Showing notifications are not supported in your browser.'));
         return;
     }
@@ -47,6 +48,7 @@ window.addEventListener('load', function() {
     if (Notification.permission === 'denied') {
       // Show a message and activate the button
       subBtn.textContent = gettext('Enable Browser Push Alerts');
+      subBtn.classList.remove("can-be-disabled");
       subBtn.disabled = false;
       showMessage(gettext('Push notifications are blocked by your browser.'));
       return;
@@ -56,6 +58,7 @@ window.addEventListener('load', function() {
     if (!('PushManager' in window)) {
       // Show a message and activate the button
       subBtn.textContent = 'Enable Browser Push Alerts';
+      subBtn.classList.remove("can-be-disabled");
       subBtn.disabled = false;
       showMessage(gettext('Push notifications are not available in your browser.'));
       return;
@@ -173,6 +176,7 @@ function unsubscribe(reg) {
                 .then(
                   function(successful) {
                     subBtn.textContent = gettext('Enable Browser Push Alerts');
+                    subBtn.classList.remove("can-be-disabled");
                     showMessage(gettext('Successfully unsubscribed from push notifications.'));
                     isPushEnabled = false;
                     subBtn.disabled = false;
