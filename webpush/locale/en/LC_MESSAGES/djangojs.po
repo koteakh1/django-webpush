@@ -27,7 +27,7 @@ msgid "Showing notifications are not supported in your browser."
 msgstr ""
 
 #: static/webpush/webpush.js:49 static/webpush/webpush.js:173
-msgid "Subscribe to Push Messaging"
+msgid "Enable Browser Push Alerts"
 msgstr ""
 
 #: static/webpush/webpush.js:51
@@ -40,7 +40,7 @@ msgstr ""
 
 #: static/webpush/webpush.js:73 static/webpush/webpush.js:120
 #: static/webpush/webpush.js:181
-msgid "Unsubscribe from Push Messaging"
+msgid "Disable Browser Push Alerts"
 msgstr ""
 
 #: static/webpush/webpush.js:76 static/webpush/webpush.js:123
